@@ -1,14 +1,13 @@
 import React from "react";
 import Logo from "./Logo";
 import Link from "next/link";
+import classes from "./Main-navigation.module.css";
 
 const MainNavigation = () => {
   return (
-    <header>
+    <header className={classes.header}>
       <Link href="/">
-        <a href="">
-          <Logo />
-        </a>
+        <Logo />
       </Link>
       <nav>
         <ul>
