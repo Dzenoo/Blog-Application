@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className={classes.hero}>
       <div className={classes.image}>
-        <Image src="/images/img.png" alt="img" width={300} height={300} />
+        <Image src="/images/site/img.png" alt="img" width={300} height={300} />
       </div>
       <h1>Hi, I'm Dzenis</h1>
       <p>
