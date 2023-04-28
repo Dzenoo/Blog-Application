@@ -3,23 +3,13 @@ import classes from "./Post-content.module.css";
 import PostHeader from "./PostHeader";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Image from "next/image";
 
 const PostContent = ({ post }) => {
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
 
   const customerRenderers = {
-    // img(image) {
-    //   return (
-    //     <Image
-    //       src={`/images/posts/${post.slug}/${image.src}`}
-    //       alt={image.alt}
-    //       width={600}
-    //       height={300}
-    //     />
-    //   );
-    // },
     p(paragraph) {
       const { node } = paragraph;
 
@@ -47,7 +37,7 @@ const PostContent = ({ post }) => {
         <SyntaxHighlighter
           language={language}
           children={children}
-          style={atomDark}
+          style={vscDarkPlus}
         />
       );
     },
