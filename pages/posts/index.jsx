@@ -9,7 +9,6 @@ const AllPostsPage = (props) => {
     </>
   );
 };
-
 export async function getStaticProps() {
   const allPosts = getAllPosts();
 
